@@ -1,0 +1,25 @@
+{
+  "name": "iHazCode",
+  "version": "0.0.0",
+  "description": "0.0.1",
+  "main": "app.js",
+  "dependencies": {
+    "express": "~3.4.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ConstableBrew/iHazCode.git"
+  },
+  "keywords": [
+    "resume",
+    "cv",
+    "portfolio"
+  ],
+  "author": "Michael Brewer",
+  "license": "MIT",
+  "gitHead": "c85088e95280c5d4bf883e437d5baac63d5ee0f0"
+}
