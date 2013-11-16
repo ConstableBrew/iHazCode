@@ -5,17 +5,7 @@
     "express": "~3.4.4"
   }
   "version": "0.0.1",
-  "description": "This is a portfolio of apps I have worked on.",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "resume",
-    "cv",
-    "portfolio"
-  ],
   "author": "Michael Brewer",
   "repository": "https://github.com/ConstableBrew/iHazCode.git",
-  "author": "Michael Brewer",
   "license": "MIT"
 }
