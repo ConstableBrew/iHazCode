@@ -1,15 +1,25 @@
 {
   "name": "iHazCode",
+<<<<<<< HEAD
   "version": "0.0.0",
   "description": "0.0.1",
   "main": "app.js",
   "dependencies": {
     "express": "~3.4.4"
+=======
+  "version": "0.0.1",
+  "description": "This is a portfolio of apps I have worked on.",
+  "main": "index.js",
+  "dependencies": {
+    "knockout": "~3.0.0",
+    "mongodb": "~1.3.19"
+>>>>>>> 84f3cb747d1bfcedfe164e3db561491a3972e371
   },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+<<<<<<< HEAD
   "repository": {
     "type": "git",
     "url": "https://github.com/ConstableBrew/iHazCode.git"
@@ -22,4 +32,9 @@
   "author": "Michael Brewer",
   "license": "MIT",
   "gitHead": "c85088e95280c5d4bf883e437d5baac63d5ee0f0"
+=======
+  "repository": "",
+  "author": "Michael Brewer",
+  "license": "MIT"
+>>>>>>> 84f3cb747d1bfcedfe164e3db561491a3972e371
 }
