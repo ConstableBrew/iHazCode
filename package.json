@@ -1,0 +1,19 @@
+{
+	"name": "iHazCode",
+	"title": "i haz code",
+	"description": "A portfolio of projects I have worked on over the years.",
+	"version": "0.0.0",
+	"homepage": "http://www.ihazco.de",
+	"author": {
+		"name": "Michael Brewer",
+		"url": "http://michaelgeekbrewer.blogspot.com"
+	},
+	"licenses": [
+		{
+			"type": "MIT"
+		}
+	],
+	"dependencies": {},
+	"devDependencies": {},
+	"keywords": ["resume","portfolio","cv"]
+}
