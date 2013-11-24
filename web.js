@@ -1,18 +1,17 @@
 var express = require("express");
 var app = express();
-var publicPath = __dirname + '\\public\\'
 app.use(express.logger());
 
 
 app.get('/', function(request, response) {
-  response.sendfile(publicPath + 'viewModels/Portfolio.html');
+	response.sendfile('viewModels/Portfolio.html', {root: './public'});
 });
 
 app.get('/:path/:file', function(request, response){
   var path = request.params.path,
 	file = request.params.file;
-    
-  response.sendfile(publicPath + path + '\\' + file);
+  
+	response.sendfile(path + '/' + file, {root: './public'});
 });
 
 
