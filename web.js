@@ -10,7 +10,7 @@ app.get('/:path/:file', function(request, response){
   var path = request.params.path,
 	file = request.params.file;
     
-  response.sendfile('/public/' + path + '/' + file);
+  response.sendfile(__dirname + '/public/' + path + '/' + file);
 });
 
 
