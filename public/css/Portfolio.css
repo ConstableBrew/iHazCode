@@ -1,0 +1,22 @@
+sectionHead {
+}
+
+title {
+  text-transform:uppercase;
+  font:normal normal 900 18pt arial,"sans-serif";
+  color:#cccccc;
+}
+
+subTitle{
+  text-transform:lowercase;
+  font:normal normal 700 14pt arial,"sans-serif";
+  color:#333333;
+  position:absolute;
+  left:2em;
+  top:12pt;
+}
+
+sectionBody {
+  font:normal normal normal 12pt arial,"sans-serif";
+  color:#333333;
+}
