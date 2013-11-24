@@ -1,6 +1,6 @@
 var express = require("express");
 var app = express();
-var publicPath = __dirname + '/../public/'
+var publicPath = __dirname + '\\..\\public\\'
 app.use(express.logger());
 
 
@@ -12,7 +12,7 @@ app.get('/:path/:file', function(request, response){
   var path = request.params.path,
 	file = request.params.file;
     
-  response.sendfile(publicPath + path + '/' + file);
+  response.sendfile(publicPath + path + '\\' + file);
 });
 
 
