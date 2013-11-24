@@ -3,7 +3,7 @@ var app = express();
 app.use(express.logger());
 
 app.get('/', function(request, response) {
-  response.sendfile(__dirname + '/public/viewModels/Portfolio.html');
+  response.sendfile(__dirname + './public/viewModels/Portfolio.html');
 });
 
 app.get('/:path/:file', function(request, response){
