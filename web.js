@@ -1,6 +1,6 @@
 var express = require("express");
 var app = express();
-var publicPath = __dirname + '\\..\\public\\'
+var publicPath = __dirname + '\\public\\'
 app.use(express.logger());
 
 
