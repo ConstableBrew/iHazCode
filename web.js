@@ -4,7 +4,8 @@ app.use(express.logger());
 
 
 app.get('/', function(request, response) {
-	response.sendfile('viewModels/Portfolio.html', {root: './public'});
+	response.write(__dirname);
+	//response.sendfile('viewModels/Portfolio.html', {root: './public'});
 });
 
 app.get('/:path/:file', function(request, response){
