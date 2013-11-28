@@ -1,11 +1,18 @@
-var express = require('express');
-var app = express();
+// set up =====================================================================
+var express  = require('express');
+var app      = express();
+var mongodb  = require('mongodb').MongoClient;
 
-var ONE_DAY = 0;//86400000;
 
-app.use(express.static(__dirname + '/public', { maxAge: ONE_DAY }));
+// configuration ==============================================================
+var database	= require('./app/config/database.js');
+var port 		= process.env.PORT || 5000;
 
-var port = process.env.PORT || 5000;
+require('./app/config/server.js')(app);
+
+
+// listen =====================================================================
+require('./app/routes.js')(app);
 app.listen(port, function() {
   console.log("Listening on " + port);
 });
