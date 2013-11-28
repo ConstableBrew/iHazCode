@@ -6,7 +6,7 @@ var app      = express();
 
 // configuration ==============================================================
 var database	= require('./app/config/database.js');
-var port 			= process.env.PORT || 5000;
+var port 		= process.env.PORT || 5000;
 
 require('./app/config/server.js')(app);
 
