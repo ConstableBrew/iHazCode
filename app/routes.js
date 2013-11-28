@@ -8,7 +8,11 @@ module.exports = function(app, database){
 	});
 	
 	// application ------------------------------------------------------------
-	app.get('*', function(req, res){
+	app.get('/', function(req, res){
 		res.sendfile('./public/index.html');
+	});
+	
+	app.get('/:folder/:file', function(req, res){
+		res.sendfile('./public/' + folder + '/' + file);
 	});
 };
