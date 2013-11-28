@@ -8,7 +8,7 @@ var app      = express();
 var database	= require('./app/config/database.js');
 var port 		= process.env.PORT || 5000;
 
-require('./app/config/server.js')(app);
+require('./app/config/server.js')(app, express);
 
 
 // listen =====================================================================
