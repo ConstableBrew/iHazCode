@@ -12,7 +12,7 @@ require('./app/config/server.js')(app, express);
 
 
 // listen =====================================================================
-require('./app/routes.js')(app);
+require('./app/routes.js')(app, database);
 app.listen(port, function() {
   console.log("Listening on " + port);
 });
