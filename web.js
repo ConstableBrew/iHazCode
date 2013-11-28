@@ -1,12 +1,12 @@
 // set up =====================================================================
 var express  = require('express');
 var app      = express();
-var mongodb  = require('mongodb').MongoClient;
+//var mongodb  = require('mongodb').MongoClient;
 
 
 // configuration ==============================================================
 var database	= require('./app/config/database.js');
-var port 		= process.env.PORT || 5000;
+var port 			= process.env.PORT || 5000;
 
 require('./app/config/server.js')(app);
 
