@@ -13,7 +13,6 @@ module.exports = function(app, database){
 	});
 	
 	app.get('/:folder/:file', function(req, res){
-		res.json('{"folder":"' + req.params.folder + '","file":"' + req.params.file + '"}');
-		//res.sendfile('./public/' + folder + '/' + file);
+		res.sendfile('./public/' + req.params.folder + '/' + req.params.file);
 	});
 };
