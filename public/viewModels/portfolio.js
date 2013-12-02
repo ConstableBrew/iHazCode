@@ -26,7 +26,7 @@ function PortfolioViewModel() {
   self.bodySections = ko.observableArray([]);
   
   // Load initial state from server
-  $.getJSON( "/api/portfolio/body", function( data ){
+  $.getJSON( "/api/portfolio", function( data ){
     var mappedSections = $.map(data.bodySections, function(item){ return new BodySection(item); });
     self.header(new Header(data.header));
     self.bodySections(mappedSections);
