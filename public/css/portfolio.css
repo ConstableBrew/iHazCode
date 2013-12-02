@@ -1,13 +1,13 @@
 sectionHead {
 }
 
-title {
+sectionTitle {
   text-transform:uppercase;
   font:normal normal 900 18pt arial,"sans-serif";
   color:#cccccc;
 }
 
-subTitle{
+sectionSubTitle{
   text-transform:lowercase;
   font:normal normal 700 14pt arial,"sans-serif";
   color:#333333;

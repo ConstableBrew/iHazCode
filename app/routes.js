@@ -2,7 +2,7 @@ module.exports = function(app, database){
 	
 	// api --------------------------------------------------------------------
 	
-	// get entire portfolio
+	// get all portfolio sections
 	app.get('/api/portfolio', function(req, res){
 		res.json(database.data);
 	});

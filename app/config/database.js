@@ -6,7 +6,7 @@ module.exports = {
 	data: {
 		"header": {
 			"title": "Michael Brewer",
-			"subTitle": "Back end leaning, full stack developer.",
+			"subTitle": "Full stack developer (with a back end tilt)",
 			"contact": [
 				{
 					"img": "",
@@ -30,37 +30,40 @@ module.exports = {
 				}
 			]
 		},
-		"body": [
+		"bodySections": [
 			{
 				"title": "OBJECTIVES",
 				"subTitle": "what i want",
-				"body": "<p>Transition my career path to focus more on full stack development with an emphasis on the back end. Seeking a company working with a cutting edge technology stack and have need for developers who can wear multiple hats. This company will describe itself with words like 'agile' or 'scrum' and team members work tightly together throughout the development cycle. Pair programming may be utilized.</p>"
+				"body": "<p>Transition my career path to focus more on full stack development with an emphasis on the back end. Seeking a company working with a cutting edge technology stack and have need for developers who can wear multiple hats. This company will describe itself with words like 'agile' or 'scrum' and team members work tightly together throughout the development cycle. Pair programming may be utilized.</p>",
+        "items": []
 			},
 			{
 				"title": "DEVELOPMENT",
 				"subTitle": "what i use",
-				"body": [
-					["Notepad++", "for all non-.Net development"],
-					["balsimiq", "for UI mockups"],
-					["Node.js", "for years I wished JavaScript could be used for more than just web pages. Node was the fulfilment of that wish. Great for client and server code sharing"],
-					["MongoDB", "when data should be contained within other data"],
-					["MS SQL", "when analytical reporting will be important"],
-					["Knockout.js", "for the great MVVM pattern"],
-					["Moca.js", "for unit testing framework"],
-					["Expect.js", "for self-descriptive unit tests"],
-					["Zombie.js", "for client-side unit tests"],
-					["Git", "for source control"],
-					["Heroku", "for easy operations management and scaling with dead simple Git pushes"]
+				"body": "",
+        "items": [
+					{"itemName": "Notepad++", "itemDetail": "for all non-.Net development"},
+					{"itemName": "balsimiq", "itemDetail": "for UI mockups"},
+					{"itemName": "Node.js", "itemDetail": "for years I wished JavaScript could be used for more than just web pages. Node was the fulfilment of that wish. Great for client and server code sharing"},
+					{"itemName": "MongoDB", "itemDetail": "when data should be contained within other data"},
+					{"itemName": "MS SQL", "itemDetail": "when analytical reporting will be important"},
+					{"itemName": "Knockout.js", "itemDetail": "for the great MVVM pattern"},
+					{"itemName": "Moca.js", "itemDetail": "for unit testing framework"},
+					{"itemName": "Expect.js", "itemDetail": "for self-descriptive unit tests"},
+					{"itemName": "Zombie.js", "itemDetail": "for client-side unit tests"},
+					{"itemName": "Git", "itemDetail": "for source control"},
+					{"itemName": "Heroku", "itemDetail": "for easy operations management and performance scaling with dead simple deployment using Git pushes"}
 				]
 			},
 			{
 				"title": "LEARNING",
 				"subTitle": "what i am exploring",
-				"body": [
-					["Functional Programming", "a different way of approaching problems"],
-					["Ruby", "wildly popular, I want to understand the hype"],
-					["PhoneGap", "hold promise of reaching more users with the same code base"],
-					["Chinese", "probably one of the hardest things I have ever attempted"]
+				"body": "",
+        "items": [
+					{"itemName": "Functional Programming", "itemDetail": "a different way of approaching problems"},
+					{"itemName": "Ruby", "itemDetail": "wildly popular, I want to understand the hype"},
+					{"itemName": "PhoneGap", "itemDetail": "holds promise of reaching more users with the same code base"},
+					{"itemName": "Chinese", "itemDetail": "probably one of the hardest things I have ever attempted"}
 				]
 			},
 			{
