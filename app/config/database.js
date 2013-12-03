@@ -5,34 +5,34 @@ module.exports = {
 	apiKey: "DLKi185eTr62bzKX4EwEXxR5BLBPEfyy",
 	data: {
     "header": "Michael Brewer",
-    "subHeader": "Full stack developer (with a back end tilt)",
+    "subHeader": "Full Stack Developer for Hire",
     "contact": [
       {
-        "img": "",
+        "img": "./img/blogger.png",
         "text": "blog",
         "url": "http://michaelgeekbrewer.blogspot.com"
       },
       {
-        "img": "",
+        "img": "./img/gmail.png",
         "text": "email",
         "url": "michael.keith.brewer@gmail.com"
       },
       {
-        "img": "",
+        "img": "./img/android-phone.png",
         "text": "mobile",
         "url": "310-420-5285"
       },
       {
-        "img": "",
-        "text": "usps",
-        "url": "12729 Gilmore Ave, Los Angeles, CA 90066"
+        "img": "./img/linkedin.png",
+        "text": "linkedin",
+        "url": "http://www.linkedin.com/pub/michael-brewer/7/1bb/201/"
       }
     ],
 		"bodySections": [
 			{
 				"title": "OBJECTIVES",
 				"subTitle": "what i want",
-				"body": "Transition my career path to focus more on full stack development with an emphasis on the back end. Seeking a company working with a cutting edge technology stack and have need for developers who can wear multiple hats. This company will describe itself with words like 'agile' or 'scrum' and team members work tightly together throughout the development cycle. Pair programming may be utilized.",
+				"body": "Transition my career path to focus more on full stack development with an emphasis on API building. Seeking a company working with a cutting edge technology stack and have need for developers who can wear multiple hats. This company will describe itself with words like 'agile' or 'scrum' and team members work tightly together throughout the development cycle. Pair programming may be utilized.",
         "items": []
 			},
 			{
@@ -67,7 +67,7 @@ module.exports = {
 			{
 				"title": "PERSONALITY",
 				"subTitle": "about me",
-				"body": "I have been fortunate in having a passion that translates into a day job. I am equally entertained by playing games with friends or solving a coding challenge.\nI keep up with science news, but tend to be the last to hear about anything else going on. I love reading novels. Mostly fantasy, but also some horror and scifi. I am currently finishing the Game of Thrones series and will be reading Disc world next.\nI bike, run, rock climb, and CrossFit. I also eat lots of chocolate.",
+				"body": "I have been fortunate in having a passion that translates into a day job. I am equally entertained by playing games with friends or solving a coding challenge. I keep up with science news, but tend to be the last to hear about anything else going on. I love reading novels. Mostly fantasy, but also some horror and scifi. I am currently finishing the Game of Thrones series and will be reading more Disc world next. My favorite podcasts are Skeptics Guide to the Universe, This Week in Virology, and Philosophize This. I bike, run, rock climb, fence, and CrossFit. I also eat lots of chocolate.",
         "items": []
 			}
 		]

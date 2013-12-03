@@ -2,13 +2,11 @@ function Contact( data ){
   this.img  = ko.observable(data.img);
   this.text = ko.observable(data.text);
   this.url  = ko.observable(data.url);
-  console.log('new Contact');
 }
 
 function Item( data ){
   this.itemName   = ko.observable(data.itemName);
   this.itemDetail = ko.observable(data.itemDetail);
-  console.log('new Item');
 }
 
 
@@ -18,7 +16,6 @@ function BodySection( data ){
   this.subTitle = ko.observable(data.subTitle);
   this.body     = ko.observable(data.body);
   this.items    = ko.observableArray(mappedItems);
-  console.log('new BodySection');
 }
 
 

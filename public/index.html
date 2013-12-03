@@ -35,6 +35,13 @@
       </li>
     </ul>
   </div>
+  
+  <div class="contact">
+    <span>contact me</span>
+    <div data-bind="foreach: contact">
+      <img data-bind="attr:{src: img, title: text}"/>
+    </div>
+  </div>
 
   <script src="./js/shims.js"></script>
   <script src="./viewModels/portfolio.js"></script>
