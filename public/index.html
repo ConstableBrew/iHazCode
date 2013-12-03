@@ -20,22 +20,24 @@
   <!--[if lt IE 7]>
     <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
-  <h1 data-bind="text: header.title"></h1>
-  <h2 data-bind="text: header.subTitle"></h2>
-  <p >
-    <h2 class="sectionTitle" data-bind="text: bodySections.title"></h2>
-    <h3 class="sectionSubTitle" data-bind="text: bodySections.subTitle"></h3>
-    <p class="sectionBody" data-bind="text: bodySections.body visible: bodySections().body.length > 0"></p>
-    <ul data-bind="foreach: bodySections.items, visible: bodySections().items().length > 0">
+  <h1 class="header" data-bind="text: title"></h1>
+  <h2 class="subHeader" data-bind="text: subTitle"></h2>
+  <div data-bind="foreach: bodySections">
+    <div>
+      <span class="sectionTitle" data-bind="text: title"></span>
+      <span class="sectionSubTitle" data-bind="text: subTitle"></span>
+    </div>
+    <p class="sectionBody" data-bind="text: body, visible: body !== ''"></p>
+    <ul data-bind="foreach: items, visible: items().length > 0">
       <li>
-        <span data-bind="text: itemName"></span>
+        <b><span data-bind="text: itemName"></span></b>
         <span data-bind="text: itemDetail"></span>
       </li>
     </ul>
-  </p>
+  </div>
 
   <script src="./js/shims.js"></script>
   <script src="./viewModels/portfolio.js"></script>
-
+ 
   </body>
 </html>

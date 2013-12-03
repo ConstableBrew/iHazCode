@@ -4,37 +4,35 @@ module.exports = {
 	pass: "Wickedgame5",
 	apiKey: "DLKi185eTr62bzKX4EwEXxR5BLBPEfyy",
 	data: {
-		"header": {
-			"title": "Michael Brewer",
-			"subTitle": "Full stack developer (with a back end tilt)",
-			"contact": [
-				{
-					"img": "",
-					"text": "blog",
-					"url": "http://michaelgeekbrewer.blogspot.com"
-				},
-				{
-					"img": "",
-					"text": "email",
-					"url": "michael.keith.brewer@gmail.com"
-				},
-				{
-					"img": "",
-					"text": "mobile",
-					"url": "310-420-5285"
-				},
-				{
-					"img": "",
-					"text": "usps",
-					"url": "12729 Gilmore Ave, Los Angeles, CA 90066"
-				}
-			]
-		},
+    "header": "Michael Brewer",
+    "subHeader": "Full stack developer (with a back end tilt)",
+    "contact": [
+      {
+        "img": "",
+        "text": "blog",
+        "url": "http://michaelgeekbrewer.blogspot.com"
+      },
+      {
+        "img": "",
+        "text": "email",
+        "url": "michael.keith.brewer@gmail.com"
+      },
+      {
+        "img": "",
+        "text": "mobile",
+        "url": "310-420-5285"
+      },
+      {
+        "img": "",
+        "text": "usps",
+        "url": "12729 Gilmore Ave, Los Angeles, CA 90066"
+      }
+    ],
 		"bodySections": [
 			{
 				"title": "OBJECTIVES",
 				"subTitle": "what i want",
-				"body": "<p>Transition my career path to focus more on full stack development with an emphasis on the back end. Seeking a company working with a cutting edge technology stack and have need for developers who can wear multiple hats. This company will describe itself with words like 'agile' or 'scrum' and team members work tightly together throughout the development cycle. Pair programming may be utilized.</p>",
+				"body": "Transition my career path to focus more on full stack development with an emphasis on the back end. Seeking a company working with a cutting edge technology stack and have need for developers who can wear multiple hats. This company will describe itself with words like 'agile' or 'scrum' and team members work tightly together throughout the development cycle. Pair programming may be utilized.",
         "items": []
 			},
 			{
@@ -69,7 +67,8 @@ module.exports = {
 			{
 				"title": "PERSONALITY",
 				"subTitle": "about me",
-				"body": "<p>I have been fortunate in having a passion that translates into a day job. I am equally entertained by playing games with friends or solving a coding challenge.</p><p>I keep up with science news, but tend to be the last to hear about anything else going on. I love reading novels. Mostly fantasy, but also some horror and scifi. I am currently finishing the Game of Thrones series and will be reading Disc world next.</p><p>I bike, run, rock climb, and CrossFit. I also eat lots of chocolate.</p>"
+				"body": "I have been fortunate in having a passion that translates into a day job. I am equally entertained by playing games with friends or solving a coding challenge.\nI keep up with science news, but tend to be the last to hear about anything else going on. I love reading novels. Mostly fantasy, but also some horror and scifi. I am currently finishing the Game of Thrones series and will be reading Disc world next.\nI bike, run, rock climb, and CrossFit. I also eat lots of chocolate.",
+        "items": []
 			}
 		]
 	}
