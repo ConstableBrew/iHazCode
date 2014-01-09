@@ -69,19 +69,29 @@ body {
 }
 
 .link {
-  fill: none;
-  stroke: #666;
+  stroke: #999;
   stroke-width: 1.5px;
+	opacity: 0.3;
 }
 
-circle {
+
+.node {
+  cursor: pointer;
   fill: #ccc;
-  stroke: #333;
+  stroke: #000;
   stroke-width: 1.5px;
+	opacity: 0.5;
 }
 
-text {
-  font: 10px sans-serif;
+.node:hover, .node:hover .label{
+	opacity: 1;
+}
+
+.label {
   pointer-events: none;
-  text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff;
+	/*text-shadow: 1px 1px 1px black, 0 0 1em black, 0 0 0.5em black;*/
+	font: normal small-caps bold 11pt "serif";
+	stroke-width: 0;
+	fill: #000;
+	opacity: 1;
 }

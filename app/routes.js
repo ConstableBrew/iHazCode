@@ -7,6 +7,7 @@ module.exports = function(app, database){
 		res.json(database.data);
 	});
 	
+	
 	// application ------------------------------------------------------------
 	app.get('/', function(req, res){
 		res.sendfile('./public/index.html');

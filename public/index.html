@@ -22,6 +22,10 @@
   <![endif]-->
   <h1 class="header" data-bind="text: title"></h1>
   <h2 class="subHeader" data-bind="text: subTitle"></h2>
+	
+	<div id="viz">
+	</div>
+	
   <div data-bind="foreach: bodySections">
     <div>
       <span class="sectionTitle" data-bind="text: title"></span>
@@ -39,7 +43,7 @@
   <div class="contact">
     <span>contact me</span>
     <div data-bind="foreach: contact">
-      <img data-bind="attr:{src: img, title: text}"/>
+      <a data-bind="attr:{href: url}"><img data-bind="attr:{src: img, title: text}"/></a>
     </div>
   </div>
 

@@ -1,7 +1,8 @@
+/*
 module.exports = {portfolio: {
 	header: {
-		title: "Michael Brewer",
-		subTitle: "Back end leaning, full stack developer.",
+		title: "Title",//"Michael Brewer",
+		subTitle: "subTitle",//"Full stack developer.",
 		contact: [
 			{
 				text: "blog",
@@ -60,3 +61,4 @@ module.exports = {portfolio: {
 		}
 	]
 }};
+*/
