@@ -21,106 +21,108 @@ function BodySection( data ){
 
 function WorkHistoryForceDirectedGraph( data ){
 	//Shamelessly stolen from http://bl.ocks.org/couchand/6420534
-	const PROJECT_NODE_SIZE = 25,
-	SKILL_NODE_RATIO = 0.2,
-	VISIBILITY_LIMIT_PX = 20;
+	const NODE_WIDTH = 40,
+	NODE_HEIGHT = 12,
+	LEAF_NODE_WIDTH = 10
+	LEAF_NODE_HEIGHT = 5;
 	
-	var node, link, text,
-	width = window.innerWidth * 0.75,
-	height = window.innerHeight * 0.66,
+	var container = document.getElementById('viz'),
+	node, link, text,
+	dragging = false,
+	width = container.offsetWidth,
+	height = container.offsetHeight,
 	svg = d3.select('#viz')
 		.append('svg')
-		.attr('width', width)
-		.attr('height', height),
-	voronoi = d3.geom.voronoi()
-		.x(function (d){ return d.x; })
-		.y(function (d){ return d.y; })
-		.clipExtent([[-10, -10], [width+10, height+10]]),
+		.attr('width', '100%')
+		.attr('height', '100%'),
+	tips = d3.select('#tips')
 	force = d3.layout.force()
-		.charge(-1000)
-		.friction(0.3)
-		.linkDistance(50)
+		.charge(function(d){ return (d.class=='node'?-1000:-100); })
+		.linkDistance(function(d){ return (d.class=='nodelink'?80:45); })
+		.linkStrength(1)
+		.friction(0.75)
+		.gravity(0.2)
 		.size([width, height]);
 	
-	function recenterVoronoi(nodes){
-		var shapes = [];
-		
-		voronoi(nodes).forEach(function(d){
-			var n = [];
-			if(!d.length){
-				return;
-			}
-			d.forEach(function(c){
-				n.push(c[0] - d.point.x, c[1] - d.point.y);
-			});
-			n.point = d.point;
-			shapes.push(n);
+	function draw(){
+		node.attr('transform', function(d){
+			return 'translate(' + 
+				(d.x - (d.class=='node'?NODE_WIDTH:LEAF_NODE_WIDTH) ) + ',' + 
+				(d.y - (d.class=='node'?NODE_HEIGHT:LEAF_NODE_HEIGHT) ) + 
+			')'; 
 		});
+		link.attr('x1', function(d){ return d.source.x; })
+			.attr('y1', function(d){ return d.source.y; })
+			.attr('x2', function(d){ return d.target.x; })
+			.attr('y2', function(d){ return d.target.y; });
 		
-		return shapes;
 	}
 	
-	function draw(){
-		var clip;
-		
-		node.attr('transform', function(d){ return 'translate(' + d.x + ',' + d.y + ')'; })
-				.attr('clip-path', function(d){ return 'url(#clip-' + d.index + ')'; });
-		link.attr('x1', function(d){ return d.source.x; })
-				.attr('y1', function(d){ return d.source.y; })
-				.attr('x2', function(d){ return d.target.x; })
-				.attr('y2', function(d){ return d.target.y; });
-		
-		clip = svg.selectAll('.clip')
-				.data( recenterVoronoi(node.data()), function(d){ return d.point.index; })
-				.enter()
-				.append('clipPath')
-				.attr('id', function(d){ return 'clip-' + d.point.index; })
-				.attr('class', 'clip')
-				.remove();
-		clip.selectAll('path')
-				.remove();
-		clip.append('path')
-				.attr('d', function(d){ return 'M' + d.join(',') + 'z'; });
-	}
+	//Add leaf nodes for skills
+	data.nodes.forEach(function(d, i) {		
+		d.id = i;
+		d.links.forEach(function(e, j) {
+			data.nodes.push({'label':e, 'class':'leaf', 'projectName': d.projectName, 'description': d.description, 'url':''});
+			data.links.push({'class':'leaflink', 'source':i, 'target':data.nodes.length-1});
+		});
+	});
 	
 	force.on('tick', draw);
 	
-	data.nodes.forEach(function(d, i) {
-		d.id = i;
-	});
 	
 	link = svg.selectAll('.link')
 		.data( data.links )
 		.enter().append('line')
-		.attr('class', 'link')
-		.style('stroke-width', function(d){ return Math.sqrt(d.value); });
+		.attr('class', function(d) { return d.class; });
 
 	node = svg.selectAll('.node')
 		.data( data.nodes )
 		.enter().append('g')
-		.attr('title', name)
-		.attr('class', 'node')
-		.call( force.drag );
-
-	node.append('circle')
-		.attr('r', 30)
-		.attr('stroke', '#000')
-		.attr('fill', '#ccc' )
-		.attr('fill-opacity', 0.5);
+		.attr('class', function(d) { return d.class; })
+		.on('mouseover', function(d) {
+			tips.html(
+				'<h2>' + d.projectName + '</h2>' +
+				'<div>' + d.description + '</div>'
+			);
+		})
+		.on('mousedown', function(){ d3.event.preventDefault(); })
+		.on('mouseup', function(d) {
+			if( typeof d.url !== 'undefined' && d.url !== ''){
+				//Open url in new tab
+				(function(a){
+					document.body.appendChild(a);
+					a.setAttribute('href', d.url);
+					a.dispatchEvent((
+						function(e) {
+							e.initMouseEvent('click', true, true, window, 0, 0, 0, 0, 0, true, false, false, false, 0, null);
+							return e
+						}(document.createEvent('MouseEvents'))
+					));
+				}(document.createElement('a')));
+			}
+		});
+	
+	node.call(force.drag);
+	
+	node.append('rect')
+		.attr('class', function(d) { return d.class; })
+		.attr('width', function(d) { return 2*(d.class=='node'?NODE_WIDTH:LEAF_NODE_WIDTH); })
+		.attr('height', function(d) { return 2*(d.class=='node'?NODE_HEIGHT:LEAF_NODE_HEIGHT); })
+		.attr('rx', function(d) { return (d.class=='node'?0:LEAF_NODE_WIDTH*2); })
+		.attr('ry', function(d) { return (d.class=='node'?NODE_HEIGHT:LEAF_NODE_HEIGHT*2); });
 	
 	node.append('svg:text')
 		.attr('class', 'label')
-		.attr('x', function(d) { return d.x; })
-		.attr('y', function(d) { return d.y; })
-		.attr('dy', '.35em')
+		.attr('x', function(d) { return (d.class=='node'?NODE_WIDTH:LEAF_NODE_WIDTH); })
+		.attr('y',function(d) { return 5+(d.class=='node'?NODE_HEIGHT:LEAF_NODE_HEIGHT); })
 		.attr('text-anchor', 'middle')
-		.style('opacity', 0.5)
 		.text(function(d) { return d.label; });
 
 	force
 		.nodes( data.nodes )
-		.links( data.links )
-		.start();
+		.links( data.links );
+	
+	force.start();
 };
 
 

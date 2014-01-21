@@ -22,8 +22,14 @@
   <![endif]-->
   <h1 class="header" data-bind="text: title"></h1>
   <h2 class="subHeader" data-bind="text: subTitle"></h2>
-	
-	<div id="viz">
+	<div>
+		<div>
+			<span class="sectionTitle">WORK HISTORY</span>
+			<span class="sectionSubTitle">selected projects</span>
+		</div>
+		<p class="sectionBody">Hover over a node to view details about my participation in that project.</p>
+		<div id="viz"></div>
+		<div id="tips"></div>
 	</div>
 	
   <div data-bind="foreach: bodySections">

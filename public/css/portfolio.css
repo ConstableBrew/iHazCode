@@ -68,30 +68,86 @@ body {
   color:#333333;
 }
 
-.link {
+.nodelink {
   stroke: #999;
-  stroke-width: 1.5px;
-	opacity: 0.3;
-}
-
-
-.node {
-  cursor: pointer;
-  fill: #ccc;
-  stroke: #000;
   stroke-width: 1.5px;
 	opacity: 0.5;
 }
 
-.node:hover, .node:hover .label{
-	opacity: 1;
+.leaflink {
+  stroke: #c99;
+  stroke-width: 1.5px;
+	opacity: 0.5;
 }
 
-.label {
+.node {
+  cursor: pointer;
+  fill: #ccc;
+  stroke: #aaa;
+  stroke-width: 1.5px;
+	opacity: 0.75;
+}
+
+.leaf {
+	fill: #fcc;
+	stroke: #c88;
+	stroke-width: 1px;
+	opacity: 0.75;
+}
+
+.leaf .label {
+  pointer-events: none;
+	color: #833;
+	font: normal normal 8pt sans-serif;
+	stroke-width: 0;
+	fill: #833;
+	opacity: 0.5;
+}
+
+.node:hover, .node:hover .label, .leaf:hover, .leaf:hover .label{
+	font-size: 12pt;
+	opacity: 1;
+	z-index: 100000;
+}
+
+.node:hover, .node:hover .label{
+	text-shadow: 1px 1px 1px steelblue, 0 0 1em steelblue, 0 0 0.5em steelblue;
+}
+
+.leaf:hover, .leaf:hover .label{
+	text-shadow: 1px 1px 1px black, 0 0 1em black, 0 0 0.5em black;
+}
+
+.label, .node text {
   pointer-events: none;
 	/*text-shadow: 1px 1px 1px black, 0 0 1em black, 0 0 0.5em black;*/
-	font: normal small-caps bold 11pt "serif";
+	color: #000;
+	font: normal small-caps bold 10pt sans-serif;
 	stroke-width: 0;
 	fill: #000;
 	opacity: 1;
+}
+
+#tips, #viz {
+	margin: 2px;
+	padding: 2px;
+	font: 10pt sans-serif;
+	border-radius: 8px;
+	pointer-events: all;
+	display: inline-block;
+}
+
+#tips {
+vertical-align:text-bottom;
+	width: 40%;
+	height: 480px;
+	background: lightsteelblue;
+	border: 2px solid steelblue;
+}
+
+#viz {
+	width: 480px;
+	height: 480px;
+	background: lightslategray;
+	border: 2px solid slategray;
 }
