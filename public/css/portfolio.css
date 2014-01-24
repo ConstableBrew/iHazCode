@@ -107,7 +107,7 @@ body {
 .node:hover, .node:hover .label, .leaf:hover, .leaf:hover .label{
 	font-size: 12pt;
 	opacity: 1;
-	z-index: 100000;
+	z-index: 100;
 }
 
 .node:hover, .node:hover .label{
@@ -128,7 +128,7 @@ body {
 	opacity: 1;
 }
 
-#tips, #viz {
+ #viz, #detail {
 	margin: 2px;
 	padding: 2px;
 	font: 10pt sans-serif;
@@ -137,17 +137,39 @@ body {
 	display: inline-block;
 }
 
-#tips {
-vertical-align:text-bottom;
-	width: 40%;
-	height: 480px;
+#detail {
+	visibility:hidden;
+	vertical-align:text-bottom;
+	width: 48%;
+	height: 500px;
 	background: lightsteelblue;
 	border: 2px solid steelblue;
 }
 
+#detail ul {
+	padding: 10px 0px 0px 25px;
+}
+
 #viz {
-	width: 480px;
-	height: 480px;
-	background: lightslategray;
-	border: 2px solid slategray;
+	width: 48%; /*480px;*/
+	height: 500px;
+	background: none;
+	border: none;
+}
+
+#tips {
+	display: none;
+	opacity: 0;
+	z-index: 100000;
+	position: absolute;
+	width: 160px;
+	height: 28px;
+	background: #9dd;
+	border: 1px solid #2a727e;
+	overflow: hidden;
+	font: 10px sans-serif;
+	line-height: 14px;
+	color: black;
+	border-radius: 4px;
+	padding: 2px;
 }

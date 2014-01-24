@@ -20,7 +20,6 @@ function BodySection( data ){
 
 
 function WorkHistoryForceDirectedGraph( data ){
-	//Shamelessly stolen from http://bl.ocks.org/couchand/6420534
 	const NODE_WIDTH = 40,
 	NODE_HEIGHT = 12,
 	LEAF_NODE_WIDTH = 10
@@ -35,7 +34,8 @@ function WorkHistoryForceDirectedGraph( data ){
 		.append('svg')
 		.attr('width', '100%')
 		.attr('height', '100%'),
-	tips = d3.select('#tips')
+	tips = d3.select('#tips'),
+	detail = d3.select('#detail'),
 	force = d3.layout.force()
 		.charge(function(d){ return (d.class=='node'?-1000:-100); })
 		.linkDistance(function(d){ return (d.class=='nodelink'?80:45); })
@@ -59,8 +59,15 @@ function WorkHistoryForceDirectedGraph( data ){
 	}
 	
 	//Add leaf nodes for skills
-	data.nodes.forEach(function(d, i) {		
+	data.nodes.forEach(function(d, i) {
+		var linksHtml = d.links.reduce(function(p, e){ return p + '<li>' + e + '</li>'; }, '');
+		
+		if(linksHtml !== ''){
+			d.description += '<ul>' + linksHtml + '</ul>';
+		}
+		
 		d.id = i;
+		
 		d.links.forEach(function(e, j) {
 			data.nodes.push({'label':e, 'class':'leaf', 'projectName': d.projectName, 'description': d.description, 'url':''});
 			data.links.push({'class':'leaflink', 'source':i, 'target':data.nodes.length-1});
@@ -80,26 +87,32 @@ function WorkHistoryForceDirectedGraph( data ){
 		.enter().append('g')
 		.attr('class', function(d) { return d.class; })
 		.on('mouseover', function(d) {
-			tips.html(
-				'<h2>' + d.projectName + '</h2>' +
-				'<div>' + d.description + '</div>'
-			);
+			// Show the tool tip
+			tips.html(d.description)
+				.style('visibility', 'visible')
+				.style('display', 'block');
+			tips.transition()
+				.style('opacity', 1.0);
+		})
+		.on('mousemove', function(d) {
+			// Move the tool tip
+			tips.style('top', (event.pageY-10)+'px')
+				.style('left',(event.pageX+10)+'px');
+		})
+		.on('mouseout', function(d) {
+			// Hide the tool tip
+			tips.transition()
+				.style('opacity', 0.0);
 		})
 		.on('mousedown', function(){ d3.event.preventDefault(); })
 		.on('mouseup', function(d) {
-			if( typeof d.url !== 'undefined' && d.url !== ''){
-				//Open url in new tab
-				(function(a){
-					document.body.appendChild(a);
-					a.setAttribute('href', d.url);
-					a.dispatchEvent((
-						function(e) {
-							e.initMouseEvent('click', true, true, window, 0, 0, 0, 0, 0, true, false, false, false, 0, null);
-							return e
-						}(document.createEvent('MouseEvents'))
-					));
-				}(document.createElement('a')));
-			}
+			// Display the project's details
+			var html = '<h2>' + d.label + '</h2>' +
+				'<h3>' + d.projectName + '</h3>' +
+				'<div>' + d.description + '</div>' +
+				((typeof d.url !== 'undefined' && d.url !== '')?('<a href="' + d.url + '" target="_blank">' + d.projectName + '</a'):'');
+			detail.html(html)
+				.style('visibility', 'visible');
 		});
 	
 	node.call(force.drag);
