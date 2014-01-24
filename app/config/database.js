@@ -5,7 +5,7 @@ module.exports = {
 	apiKey: "DLKi185eTr62bzKX4EwEXxR5BLBPEfyy",
 	data: {
     "header": "Michael Brewer",
-    "subHeader": "Full stack developer for hire.",
+    "subHeader": "Full stack developer",
     "contact": [
       {
         "img": "./img/blogger.png",
