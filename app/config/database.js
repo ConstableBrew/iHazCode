@@ -26,6 +26,11 @@ module.exports = {
         "img": "./img/linkedin.png",
         "text": "linkedin",
         "url": "http://www.linkedin.com/pub/michael-brewer/7/1bb/201/"
+      },
+      {
+        "img": "./img/resume.png",
+        "text": "download my resume",
+        "url": "./doc/MichaelKBrewer-Resume_2013.docx"
       }
     ],
 		"bodySections": [

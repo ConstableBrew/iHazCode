@@ -29,7 +29,7 @@
 		</div>
 		<p class="sectionBody">Click a node to view details about my participation in that project.</p>
 		<div id="viz"></div>
-		<div id="detail"></div>
+		<div id="detail">Click a node to the left for details about my participation in that project.</div>
 		<div id="tips"></div>
 	</div>
 	
@@ -50,7 +50,7 @@
   <div class="contact">
     <span>contact me</span>
     <div data-bind="foreach: contact">
-      <a data-bind="attr:{href: url}"><img data-bind="attr:{src: img, title: text}"/></a>
+      <a data-bind="attr:{href: url}"><img class="contactme" data-bind="attr:{src: img, title: text}"/></a>
     </div>
   </div>
 
