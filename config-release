@@ -2,3 +2,6 @@
 default-ip                     : auto
 default-port                   : auto
 default-image-converter        : im
+allow-compile-js: false
+allow-compile-css: false
+allow-compress-html: false
