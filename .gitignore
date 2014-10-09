@@ -7,10 +7,11 @@
 *.gz
 
 config
+config-*
 
 pids
 logs
 results
-
+tmp
 node_modules
 lib-cov

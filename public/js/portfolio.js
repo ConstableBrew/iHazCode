@@ -1,7 +1,9 @@
 // Load initial state from server
 $.getJSON( "/workHistory", function( data ){
+	debugger;
+	data = JSON.parse(data);
 	var nodeMap = {};
-	var nodes = []
+	var nodes = [];
 	var links = [];
 	var i, j, n;
 	for(i=0; i<data.length; ++i){
@@ -11,9 +13,9 @@ $.getJSON( "/workHistory", function( data ){
 	for(i=0; i<data.length; ++i){
 		n = data[i];
 		nodes.push(n);
-		for(j=0; j<n.links.length; ++j){
+		for(j=0; n.links && j<n.links.length; ++j){
 			l = n.links[j];
-			links.push({source: i, target: nodeMap[l.id]});
+			links.push({source: i, target: nodeMap[l], class: 'nodelink'});
 		}
 	}
 
@@ -38,9 +40,9 @@ function WorkHistoryForceDirectedGraph( data ){
 		.attr('height', '100%');
 	var tips = d3.select('#tips');
 	var force = d3.layout.force()
-		.charge(function(d){ return (d.class=='node'?-1000:-100); })
-		.linkDistance(function(d){ return (d.class=='nodelink'?80:45); })
-		.linkStrength(1)
+		.charge(function(d){ return (d.class.indexOf('node')!=-1?-500:-75); })
+		.linkDistance(function(d){ return (d.class.indexOf('nodelink')!=-1?80:45); })
+		.linkStrength(0.5)
 		.friction(0.75)
 		.gravity(0.2)
 		.size([width, height]);
@@ -62,7 +64,8 @@ function WorkHistoryForceDirectedGraph( data ){
 	//Add leaf nodes for skills
 	data.nodes.forEach(function(d, i) {
 		d.id = i;
-		d.links.forEach(function(e, j) {
+		d.class = d.class + ' node';
+		d.skillCloud.forEach(function(e, j) {
 			data.nodes.push({'label':e, 'class':'leaf', 'projectName': d.projectName, 'description': d.description, 'url':''});
 			data.links.push({'class':'leaflink', 'source':i, 'target':data.nodes.length-1});
 		});
@@ -85,9 +88,17 @@ function WorkHistoryForceDirectedGraph( data ){
 				'<h2>' + d.projectName + '</h2>' +
 				'<div>' + d.description + '</div>'
 			);
+			debugger;
+			data.links.forEach(function(l){
+				if ((l.source.id==d.id || l.target.id==d.id) && l.class=='leaflink') {
+					l.class += ' show';
+				}
+			})
+
 		})
 		.on('mousedown', function(){ d3.event.preventDefault(); })
 		.on('mouseup', function(d) {
+			/*
 			if( typeof d.url !== 'undefined' && d.url !== ''){
 				//Open url in new tab
 				(function(a){
@@ -101,21 +112,24 @@ function WorkHistoryForceDirectedGraph( data ){
 					));
 				}(document.createElement('a')));
 			}
+			*/
+		})
+		.on('mouseout', function (d) {
 		});
 
 	node.call(force.drag);
 
 	node.append('rect')
 		.attr('class', function(d) { return d.class; })
-		.attr('width', function(d) { return 2*(d.class=='node'?NODE_WIDTH:LEAF_NODE_WIDTH); })
-		.attr('height', function(d) { return 2*(d.class=='node'?NODE_HEIGHT:LEAF_NODE_HEIGHT); })
-		.attr('rx', function(d) { return (d.class=='node'?0:LEAF_NODE_WIDTH*2); })
-		.attr('ry', function(d) { return (d.class=='node'?NODE_HEIGHT:LEAF_NODE_HEIGHT*2); });
+		.attr('width', function(d) { return 2*(d.class.indexOf('node')!=-1?NODE_WIDTH:LEAF_NODE_WIDTH); })
+		.attr('height', function(d) { return 2*(d.class.indexOf('node')!=-1?NODE_HEIGHT:LEAF_NODE_HEIGHT); })
+		.attr('rx', function(d) { return (d.class.indexOf('node')!=-1?0:LEAF_NODE_WIDTH*2); })
+		.attr('ry', function(d) { return (d.class.indexOf('node')!=-1?NODE_HEIGHT:LEAF_NODE_HEIGHT*2); });
 
 	node.append('svg:text')
 		.attr('class', 'label')
-		.attr('x', function(d) { return (d.class=='node'?NODE_WIDTH:LEAF_NODE_WIDTH); })
-		.attr('y',function(d) { return 5+(d.class=='node'?NODE_HEIGHT:LEAF_NODE_HEIGHT); })
+		.attr('x', function(d) { return (d.class.indexOf('node')!=-1?NODE_WIDTH:LEAF_NODE_WIDTH); })
+		.attr('y',function(d) { return 5+(d.class.indexOf('node')!=-1?NODE_HEIGHT:LEAF_NODE_HEIGHT); })
 		.attr('text-anchor', 'middle')
 		.text(function(d) { return d.label; });
 
