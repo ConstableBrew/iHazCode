@@ -1,14 +1,7 @@
 var config = framework.config;
 var pmongo = require('promised-mongo');
 
-var db = pmongo(String(process.env.mongourl).format(
-		process.env.mongouser,
-		process.env.mongopass,
-		process.env.mongoport,
-		process.env.mongodatabase
-	),
-	JSON.parse(process.env.mongocollections)
-);
+var db = pmongo(process.env.MONGOLAB_URI,['contacts', 'bodySections', 'workHistory']);
 
 
 // Our database is super small, so we cache the whole thing in server memory
