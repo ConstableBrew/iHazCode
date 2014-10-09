@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]>	<html class="no-js lt-ie9">	<![endif]-->
+<!--[if gt IE 8]>	<html class="no-js"> <![endif]-->
+	<head>
+	@{meta}
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Portfolio - Michael Brewer</title>
+	<meta name="description" content="A portfolio of projects I have worked on.">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	@{head}
+	<link rel="stylesheet" href="./css/main.css">
+	<link rel="stylesheet" href="./css/normalize.css">
+	<link rel="stylesheet" href="./css/portfolio.css">
+	<script src="./js/lib/modernizr-2.6.2.min.js"></script>
+
+	</head>
+	<body>
+	<!--[if lt IE 9]>
+		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+
+	<div>@{body}</div>
+
+	<!-- TODO: RequireJS -->
+	<script src="./js/lib/shims.js"></script>
+	<script src="./js/lib/jquery-1.10.2.min.js"></script>
+	<script src="./js/lib/d3.v3.min.js"></script>
+	<script src="./js/portfolio.js"></script>
+	@{section('scripts')}
+
+	</body>
+</html>
