@@ -6,9 +6,7 @@
 *.pid
 *.gz
 
-config
-config-debug
-config-release
+/config
 
 pids
 logs

@@ -1,13 +1,13 @@
 var config = framework.config;
 var pmongo = require('promised-mongo');
 
-var db = pmongo(String(config['mongo.url']).format(
-		config['mongo.user'],
-		config['mongo.pass'],
-		config['mongo.port'],
-		config['mongo.database']
+var db = pmongo(String(process.env.mongourl).format(
+		process.env.mongouser,
+		process.env.mongopass,
+		process.env.mongoport,
+		process.env.mongodatabase
 	),
-	JSON.parse(config['mongo.collections'])
+	JSON.parse(process.env.mongocollections)
 );
 
 
