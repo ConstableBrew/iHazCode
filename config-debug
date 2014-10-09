@@ -1,0 +1,4 @@
+port: 8000
+allow-compile-js: false
+allow-compile-css: false
+allow-compress-html: false

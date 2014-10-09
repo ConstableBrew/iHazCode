@@ -1,0 +1,20 @@
+<div>
+	<span class="sectionTitle">@{model.title}</span>
+	<span class="sectionSubTitle">@{model.subTitle}</span>
+</div>
+@{if (model.body && model.body.length > 0)}
+	<p class="sectionBody">@{model.body}</p>
+@{endif}
+@{if (model.items && model.items.length > 0)}
+	<ul>
+		@{foreach item in model.items}
+			<li>
+				<b><span>@{item.itemName}</span></b>&nbsp;
+				<span>@{item.itemDetail}</span>
+			</li>
+		@{end}
+	</ul>
+@{endif}
+@{if (model.html && model.html.length > 0)}
+	@{!model.html}
+@{endif}

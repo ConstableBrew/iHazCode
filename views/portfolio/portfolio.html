@@ -1,0 +1,15 @@
+<h1 class="header">@{model.header}</h1>
+<h2 class="subHeader">@{model.subHeader}</h2>
+
+@{foreach section in model.bodySections}
+	@{view('_bodySection', section)}
+@{end}
+
+<div class="contact">
+	<span>contact me</span>
+	<div>
+		@{foreach contact in model.contacts}
+			@{view('_contact', contact)}
+		@{end}
+	</div>
+</div>
