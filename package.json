@@ -1,17 +1,17 @@
 {
   "name": "iHazCode",
-  "main": "web.js",
-  "scripts": {
-    "test": "node ./test/test.js"
-  },
+  "main": "debug.js",
   "dependencies": {
-    "express": "~3.x"
+    "total.js": "*",
+    "q": "*",
+    "promised-mongo": "*",
+    "requirejs": "*"
   },
   "engines": {
-    "node": "0.10.x",
-    "npm": "1.2.x"
+    "node": "*",
+    "npm": "*"
   },
-  "version": "0.0.1",
+  "version": "2.0.0",
   "author": "Michael Brewer",
   "repository": {
     "type": "git",
@@ -19,7 +19,5 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "mocha": "~1.14.0",
-    "expect.js": "~0.2.0"
   }
 }
