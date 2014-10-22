@@ -5,7 +5,8 @@
     "total.js": "*",
     "q": "*",
     "promised-mongo": "*",
-    "requirejs": "*"
+    "requirejs": "*",
+    "sendgrid": "*"
   },
   "engines": {
     "node": "*",

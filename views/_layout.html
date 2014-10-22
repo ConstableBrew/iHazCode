@@ -1,33 +1,39 @@
 <!DOCTYPE html>
-<!--[if lt IE 9]>	<html class="no-js lt-ie9">	<![endif]-->
-<!--[if gt IE 8]>	<html class="no-js"> <![endif]-->
+<html>
 	<head>
-	@{meta}
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Portfolio - Michael Brewer</title>
-	<meta name="description" content="A portfolio of projects I have worked on.">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	@{head}
-	<link rel="stylesheet" href="./css/main.css">
-	<link rel="stylesheet" href="./css/normalize.css">
-	<link rel="stylesheet" href="./css/portfolio.css">
-	<script src="./js/lib/modernizr-2.6.2.min.js"></script>
-
+		<title>@{title}</title>
+		@{meta}
+		<meta charset="UTF-8" />
+		<meta name="author" content="Michael K Brewer" />
+		<meta name="description" content="Michael Brewer, Software Developer. I work with the full stack, emphasizing Node.js and the back end." />
+		<meta name="keywords" content="" />
+		<link rel="copyright" href="copyright.html">
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-desktop.css" />
+		</noscript>
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+		@{head}
 	</head>
-	<body>
-	<!--[if lt IE 9]>
-		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-	<![endif]-->
+	<body class="homepage">
+	
+	<div id="header-wrapper">
+		@{view('_masthead', {})}
+	</div>
 
-	<div>@{body}</div>
-
-	<!-- TODO: RequireJS -->
-	<script src="./js/lib/shims.js"></script>
-	<script src="./js/lib/jquery-1.10.2.min.js"></script>
-	<script src="./js/lib/d3.v3.min.js"></script>
-	<script src="./js/portfolio.js"></script>
+	@{body}
+	
+	<div id="footer-wrapper" class="wrapper style4">
+		@{view('_footer', model)}
+	</div>
+	
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.scrolly.min.js"></script>
+	<script src="js/skel.min.js"></script>
+	<script src="js/init.js"></script>
 	@{section('scripts')}
 
 	</body>

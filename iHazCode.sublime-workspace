@@ -1,0 +1,418 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"proto",
+				"prototype"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "<!DOCTYPE html>\n<html>\n	<head>\n		<title>@{title}</title>\n		@{meta}\n		<meta charset=\"UTF-8\" />\n		<meta name=\"author\" content=\"Michael K Brewer\" />\n		<meta name=\"description\" content=\"Michael Brewer, Software Developer. I work with the full stack, emphasizing Node.js and the back end.\" />\n		<meta name=\"keywords\" content=\"\" />\n		<link rel=\"copyright\" href=\"copyright.html\">\n		<!--[if lte IE 8]><script src=\"css/ie/html5shiv.js\"></script><![endif]-->\n		<script src=\"js/jquery.min.js\"></script>\n		<noscript>\n			<link rel=\"stylesheet\" href=\"css/skel.css\" />\n			<link rel=\"stylesheet\" href=\"css/style.css\" />\n			<link rel=\"stylesheet\" href=\"css/style-desktop.css\" />\n		</noscript>\n		<!--[if lte IE 8]><link rel=\"stylesheet\" href=\"css/ie/v8.css\" /><![endif]-->\n		@{head}\n	</head>\n	<body class=\"homepage\">\n	\n	@{body}\n\n\n	\n	<div id=\"footer-wrapper\">\n		@{view('_footer', model)}\n	</div>\n	\n	<script src=\"js/jquery.dropotron.min.js\"></script>\n	<script src=\"js/jquery.rotatorrr.min.js\"></script>\n	<script src=\"js/jquery.poptrox.min.js\"></script>\n	<script src=\"js/skel.min.js\"></script>\n	<script src=\"js/skel-layers.min.js\"></script>\n	<script src=\"js/init.js\"></script>\n	@{section('scripts')}\n\n	</body>\n</html>\n",
+			"file": "views/_layout.html",
+			"file_size": 1170,
+			"file_write_time": 130578981572546771,
+			"settings":
+			{
+				"buffer_size": 1197,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "views/_contact.html",
+			"settings":
+			{
+				"buffer_size": 101,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "controllers/home.js",
+			"settings":
+			{
+				"buffer_size": 565,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "public/index.html",
+			"settings":
+			{
+				"buffer_size": 17202,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "[ ![Codeship Status for ConstableBrew/iHazCode](https://www.codeship.io/projects/0a29b880-3b40-0132-01f2-7235cdea93e5/status)](https://www.codeship.io/projects/42574)\niHazCode\nThis is a portfolio for projects I have worked on.",
+			"file": "readme.md",
+			"file_size": 60,
+			"file_write_time": 130578981572516750,
+			"settings":
+			{
+				"buffer_size": 226,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "models/ProjectDetail.js",
+			"settings":
+			{
+				"buffer_size": 246,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/GitHub/iHazCode",
+		"/C/GitHub/iHazCode/controllers",
+		"/C/GitHub/iHazCode/definitions",
+		"/C/GitHub/iHazCode/models",
+		"/C/GitHub/iHazCode/public/css",
+		"/C/GitHub/iHazCode/views",
+		"/C/GitHub/iHazCode/views/portfolio"
+	],
+	"file_history":
+	[
+		"/C/GitHub/iHazCode/views/_footer.html",
+		"/C/GitHub/iHazCode/views/portfolio/_contact.html",
+		"/C/GitHub/iHazCode/models/iHazCodeBase.js",
+		"/C/GitHub/iHazCode/models/HomePage.js",
+		"/C/GitHub/iHazCode/definitions/extends.js",
+		"/C/GitHub/iHazCode/controllers/home.js",
+		"/C/GitHub/iHazCode/definitions/database.js",
+		"/C/GitHub/iHazCode/views/portfolio/portfolio.html",
+		"/C/GitHub/iHazCode/models/FeaturedProjects.js",
+		"/C/GitHub/iHazCode/models/ContactDetail.js",
+		"/C/GitHub/iHazCode/views/portfolio/_bodySection.html",
+		"/C/GitHub/iHazCode/controllers/workHistory.js",
+		"/C/GitHub/iHazCode/models/PortfolioDisplay.js",
+		"/C/GitHub/iHazCode/views/Copyright.html",
+		"/C/GitHub/iHazCode/public/css/skel.css",
+		"/C/GitHub/RMUD/RMUD/RMUD.csproj",
+		"/C/Program Files (x86)/Mono-3.2.3/bin/mcs.bat",
+		"/C/GitHub/RMUD/Procfile",
+		"/C/GitHub/RMUD/RMUD/app.config",
+		"/C/GitHub/RMUD/RMUD/Core/Accounts.cs",
+		"/C/GitHub/RMUD/RMUD/bin/Debug/database/static/settings.cs"
+	],
+	"find":
+	{
+		"height": 43.0
+	},
+	"find_in_files":
+	{
+		"height": 117.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"4u"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 4,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "views/_layout.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1197,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								811,
+								811
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "views/_contact.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 101,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								42,
+								48
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "controllers/home.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 565,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								550,
+								550
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "public/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 17202,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								16739,
+								16739
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 6753.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "readme.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 226,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								226,
+								226
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "models/ProjectDetail.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 246,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								242,
+								242
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 40.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "iHazCode.sublime-project",
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 188.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

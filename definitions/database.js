@@ -1,43 +1,57 @@
-var config = framework.config;
-var pmongo = require('promised-mongo');
+var promisedMongo = require('promised-mongo');
+var collections = ['contacts', 'projects', 'posts'];
 
-var db = pmongo(process.env.MONGOLAB_URI,['contacts', 'bodySections', 'workHistory']);
+console.log('Connecting to database: ' + process.env.MONGOLAB_URI);
+var db = promisedMongo(
+	//process.env.MONGOLAB_URI,
+	//'ds053658.mongolab.com:53658/heroku_app19524016',
+	'iHazCode:4izdccacq785xw29@ds053658.mongolab.com:53658/heroku_app19524016',
+	collections
+);
 
+// Test connection is good
+db.runCommand({ping:1}).then(function(res, err) {
+    if (!err && res.ok) {
+    	console.log('Db connection is good', res);
+    } else {
+    	console.log('Db connection is bad', res);
+    }
+}).catch(function(err) {
+	console.log('Db Error!', err);
+}).done(function(){console.log('Db test fulfilled');}, function(){console.log('DB test rejected!');});
 
-// Our database is super small, so we cache the whole thing in server memory
-console.log('Fetching data...');
-framework.db = {};
-Promise.allSettled([
-	fetchCollection('contacts'),
-	fetchCollection('bodySections', {sort: 1}),
-	fetchCollection('workHistory')
-])
-.then(function(){
-	// TODO: This shouldn't be reported until everything is done...
-	console.log('finished fetching data');
-})
-.done();
+db.GetData = GetData;
+framework.db = db;
 
-function fetchCollection(collectionName, sort){
-	var promise = db[collectionName].find();
+/*
+	Example Usage:
+	var x = framework.db['projects'].find({featured: true})
+		.sort({impact: 1})
+		.toArray() // #important! Needed to trigger the promise
+		.then(success, err)
+		.done(success, err); // #important! Needed to ensure proper err handling
+
+	or equivelantly:
+	var x = framework.db.GetData('projects', {featured: true}, {impact: 1});
+*/
+
+// Helper function that encapsulates the promise, ensuring
+// proper cleanup is performed and returns the data array.
+function GetData(collectionName, filter, sort) {
+	filter = filter || {};
+	var promise = db[collectionName].find(filter);
 
 	if(typeof sort !== 'undefined') {
 		promise.sort(sort);
 	}
 
-	return promise.toArray().then(
-		function (collection) {
-			if (!collection || collection.length == 0) {
-				throw 'No ' + collectionName + ' documents found';
-			}
-			else {
-				console.log('fetched ' + collectionName);
-				framework.db[collectionName] = collection;
-			}
-		}
-	).catch(
-		function (error) {
-			console.log('Failed!\n', error, '\n\n');
-		}
-	).done();
+	return promise.toArray().done(fulfilled, rejected);
+
+	function fulfilled() {
+		return data;
+	}
+	function rejected (error) {
+		console.log('DB Call Failed!\n', error, '\n\n');
+		return [];
+	}
 }
