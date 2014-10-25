@@ -5,7 +5,10 @@ module.exports = {
 };
 function HomePage() {
 	debugger;
-	this.projects = [];
+	this.masthead = {};
+	this.work = {};
+	this.portfolio = [];
 	this.about = {};
+
 }
 HomePage = framework.model('iHazCodeBase').extend(HomePage);

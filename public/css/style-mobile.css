@@ -150,15 +150,10 @@
 /* Wrappers                                                                      */
 /*********************************************************************************/
 
-	#header-wrapper
+	.wrapper
 	{
-		/* Adjust the 75% below to reposition the horizontal center of your background image */
-		background-position: 75% center !important;
-	}
-
-	.wrapper, #footer-wrapper,
-	{
-		padding: 1em 20px 1em 20px;
+		padding: 3em 15px 3em 15px;
+		text-align: center;
 	}
 
 		.wrapper.first
@@ -172,7 +167,6 @@
 
 	#nav
 	{
-		display: none;
 	}
 	
 		#nav a
@@ -181,47 +175,27 @@
 		}
 		
 /*********************************************************************************/
-/* Header                                                                        */
+/* Articles                                                                      */
 /*********************************************************************************/
 
-	#header
+	#top
 	{
-		padding: 6em 0 4em 0;
+	}
+
+		#top .image
+		{
+			width: 70%;
+			height: auto;
+			margin: 0 auto 1.75em auto;
+		}
+	
+	#contact
+	{
 	}
 	
-		#header h1
+		#contact footer
 		{
-			letter-spacing: -1px;
-			font-size: 1.75em;
-		}
-
-			#header h1 a
-			{
-				padding: 0.35em 0.85em 0.35em 0.85em;
-			}
-	
-/*********************************************************************************/
-/* Banner                                                                        */
-/*********************************************************************************/
-
-	#banner
-	{
-		padding: 2em;
-	}
-	
-		#banner h2
-		{
-			letter-spacing: -1px;
-			font-size: 2em;
-			line-height: 1.25em;
-		}
-
-		#banner p
-		{
-			letter-spacing: -1px;
-			font-size: 1.35em;
-			line-height: 1.5em;
-			margin-top: 0.5em;
+			margin: 0;
 		}
 		
 /*********************************************************************************/
@@ -231,7 +205,7 @@
 	#copyright
 	{
 		font-size: 1em;
-		margin: 4em 0 1em 0;
+		margin: 0;
 	}
 	
 		#copyright li

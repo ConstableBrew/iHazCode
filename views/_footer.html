@@ -1,31 +1,38 @@
-<div id="contact" class="container">
-	<div class="row">
-		<div class="6u">
-			<section>
-				<header>
-					<h2>Get In Touch</h2>
-				</header>
-				<p>I am a full stack web developer with an emphasis on the back end. I enjoy building APIs, crunching data, and working with the latest in frameworks and libraries. Lately I have been working with Node.js, C#, and Backbone.</p>
-				<p><a href="tel:+13104205285">1-310-420-5285</a><span class="bullet"> &bull; </span><a href="mailto:michael.keith.brewer@gmail.com">michael.keith.brewer@gmail.com</a></p>
-			</section>
+<div class="wrapper style4">
+	<article id="contact" class="container small">
+		<!--<header>
+			<h2>Do I want to say something here?</h2>
+			<p>Maybe I do. Maybe I don't. Wee shall see.</p>
+		</header>-->
+		<div> 
+			<div class="row">
+				<div class="6u">
+					<section>
+						<header>
+							<h2>Get In Touch</h2>
+						</header>
+						<p>I am a full stack web developer with an emphasis on the back end. I enjoy building APIs, crunching data, and working with the latest in frameworks and libraries. Lately I have been working with Node.js and C#.</p>
+						<p><a href="tel:+13104205285">1-310-420-5285</a><span class="bullet"> &bull; </span><a href="mailto:michael.keith.brewer@gmail.com">michael.keith.brewer@gmail.com</a></p>
+					</section>
+				</div>
+				<div class="6u">
+					<header>
+						<h2>Find me on...</h2>
+					</header>
+					<section>
+						<ul class="social">
+							@{foreach contact in model.contacts}
+								@{view('_contact', contact)}
+							@{end}
+						</ul>
+					</section>
+				</div>
+			</div>
 		</div>
-		<div class="6u">
-			<header>
-				<h2>Find me on...</h2>
-			</header>
-			<section>
-				<ul class="social">
-					@{foreach contact in model.contacts}
-						@{view('_contact', contact)}
-					@{end}
-				</ul>
-			</section>
-		</div>
-	</div>
+		<footer>
+			<div id="copyright">
+				<a href="Copyright.html">&copy; Michael K. Brewer. Licensed under the Creative Commons Attribution 3.0 License</a>
+			</div>
+		</footer>
+	</article>
 </div>
-
-<footer>
-	<div id="copyright">
-		<a href="Copyright.html">&copy; Michael K. Brewer. Licensed under the Creative Commons Attribution 3.0 License</a>
-	</div>
-</footer>

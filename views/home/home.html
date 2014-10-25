@@ -1,16 +1,15 @@
-<div class="wrapper style1">
-	<div class="container">
-		<div class="row">
-			<div class="12u">
-				<section>
-					<header>
-						<h2>@{model.about.title}</h2>
-						<span class="byline">@{model.about.subTitle}</span>
-					</header>
-					<p>@{!model.about.content}</p>
-					<a href="#contact" class="button big scrolly">Get in touch with me</a>
-				</section>
-			</div>
-		</div>
-	</div>
+
+<div class="wrapper style1 first">
+	@{view('_masthead', model.masthead)}
+</div>
+<div class="wrapper style2">
+	@{view('_work', model.work)}
+</div>
+<!--
+<div class="wrapper style3">
+	@view('_portfolio', model.portfolio)}
+</div>
+-->
+<div class="wrapper style2">
+	@{view('_about', model.about)}
 </div>

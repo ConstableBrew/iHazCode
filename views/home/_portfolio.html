@@ -1,0 +1,32 @@
+<article id="portfolio">
+	<header>
+		<h2>Here’s some stuff I made.</h2>
+		<p>Coding done for various websites, apps, and personal projects.</p>
+	</header>
+	<div class="container">
+		@{model.rows = model.portfolio.reduce(function(p,e,i) {
+			if (i % 4 === 0) { /* 4 items per row */
+				p.push([]);
+			}
+			p[p.length - 1].push(e);
+			return p;
+		}, [])}
+		@{foreach row in model.rows}
+			<div class="row">
+				@{foreach column in row}
+					@{column}
+					<div class="3u">
+						<article class="box style2">
+							<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
+							<h3>@{column.label}</h3>
+							<p>@{column.description}</p>
+						</article>
+					</div>
+				@{end}
+			</div>
+		@{end}
+	</div>
+	<footer>
+		<a href="#contact" class="button big scrolly">Get in touch with me</a>
+	</footer>
+</article>
