@@ -15,7 +15,6 @@
 			<link rel="stylesheet" href="css/style.css" />
 			<link rel="stylesheet" href="css/style-desktop.css" />
 		</noscript>
-		<link rel="stylesheet" href="css/codemirror.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 		@{head}
 	</head>
@@ -25,24 +24,11 @@
 	
 	@{body}
 	
-	@{view('_footer', model)}
+	@{view('_footer', {})}
 	
 	<script src="js/jquery.scrolly.min.js"></script>
 	<script src="js/skel.min.js"></script>
 	<script src="js/init.js"></script>
-	<script src="js/codemirror.js"></script>
-	<script src="beautify.js"></script>
-	<script src="codemirror.mode.javascript.js"></script>
-	<script src="javascriptobfuscator_unpacker.js"></script>
-	<script src="rasterizeHTML.allinone.js"></script>
-	<script>
-	//	var canvas = document.getElementById("parallaxBG");
-	//	var context = canvas.getContext('2d');
-	//	var script = js_beautify(jquery.toString());
-	//	var html = document.createElement('div');
-	//	CodeMirror( html, {value: script, mode: 'javascript', readOnly: 'nocursor'});
-	//	raserizeHTML.drawHTML(html, canvas);
-	</script>
 	@{section('scripts')}
 
 	</body>
