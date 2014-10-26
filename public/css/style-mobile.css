@@ -146,6 +146,33 @@
 				width: auto;
 			}
 
+	/* Item */
+
+		.item
+		{
+			border: 0;
+		}
+		
+			.item.thumb
+			{
+				width: 50%;
+				float: left;
+				height: 9em;
+			}
+			
+				.item.thumb h2
+				{
+					display: none;
+				}
+/*********************************************************************************/
+/* portfolio                                                                          */
+/*********************************************************************************/
+
+	#portfolio
+	{
+		overflow: hidden;
+	}
+
 /*********************************************************************************/
 /* Wrappers                                                                      */
 /*********************************************************************************/
@@ -212,3 +239,19 @@
 		{
 			display: block;
 		}
+
+/*********************************************************************************/
+/* Popup                                                                         */
+/*********************************************************************************/
+
+	.poptrox-popup
+	{
+		background: #0a0f1c;
+		box-shadow: 0px 0px 30px 10px rgba(8,11,19,0.85);
+		border: solid 2.5px #fff;
+		-moz-box-sizing: content-box;		
+		-webkit-box-sizing: content-box;		
+		-o-box-sizing: content-box;		
+		-ms-box-sizing: content-box;		
+		box-sizing: content-box;		
+	}

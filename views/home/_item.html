@@ -1,0 +1,7 @@
+
+@{foreach item in model.collection}
+    <article class="item thumb" data-width="264">
+        <h2>@{item.title || ''}</h2>
+        <a href="@{item.full || ''}"><img src="@{item.thumbnail || ''}" alt=""></a>
+    </article>
+@{end}

@@ -1,0 +1,27 @@
+@{model.collection = model.collection.reduce(function(p,e,i) {
+	if (i % 3 === 0) { /* 3 items per row */
+		p.push([]);
+	}
+	p[p.length - 1].push(e);
+	return p;
+}, [])}
+@{foreach row in model.collection}
+	<div class="row">
+		@{foreach box in row}
+			<div class="4u">
+				<section class="box style1">
+					<span class="icon featured @{box.icon || ''}"></span>
+					<h3>@{box.title}</h3>
+					<p>@{box.subTitle || ''}</p>
+					@{if typeof box.list !== 'undefined'}
+						<ul class="default">
+							@{foreach listItem in box.list}
+								<li>@{!listItem}</li>
+							@{end}
+						</ul>
+					@{endif}
+				</section>
+			</div>
+		@{end}
+	</div>
+@{end}

@@ -9,14 +9,10 @@ function view_homePage() {
 	var model = framework.model('HomePage').create();
 	var db = framework.db;
 
-	Promise.allSettled([
-		model.masthead,
-		model.home,
-		model.portfolio,
-		model.about
-	]).then(function(){
+	model.dataPromise.then(function(){
 		self.title('Software Developer | Michael K. Brewer');
 		self.layout('_layout');
 		self.view('home', model);
+		console.log('Home page view: ' + JSON.stringify(model).length);
 	});
 }

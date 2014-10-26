@@ -1,0 +1,5 @@
+<ul class="social">
+    @{foreach icon in model.collection}
+        <li><a href="@{icon.url || ''}" class="icon @{icon.faicon || ''}" target="_blank"><span class="label">@{icon.label || ''}</span></a></li>
+    @{end}
+</ul>

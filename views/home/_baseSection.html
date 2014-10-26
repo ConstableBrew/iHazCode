@@ -1,0 +1,33 @@
+<header>
+	@{if typeof model.title !== 'undefined'}
+		<h2>@{!model.title}</h2>
+	@{endif}
+	@{if typeof model.subTitle !== 'undefined'}
+		<p>@{!model.subTitle}</p>
+	@{endif}
+</header>
+<div class="container">
+	@{if typeof model.content !== 'undefined'}
+		<div class="row">
+			<div class="@{model.width || '12u'}">
+				<section>
+					<p>@{!model.content}</p>
+				</section>
+			</div>
+		</div>
+	@{endif}
+	@{if typeof model.collectionStyle !== 'undefined'}
+		@{if model.collectionStyle == 'box'}
+			@{view('_box', model)}
+		@{endif}
+		@{if model.collectionStyle == 'card'}
+			@{view('_card', model)}
+		@{endif}
+		@{if model.collectionStyle == 'social'}
+			@{view('_social', model)}
+		@{endif}
+	@{endif}
+</div>
+@{if typeof model.cta !== 'undefined'}
+	<footer><a href="@{model.ctaUrl || ''}" class="button big scrolly">@{model.cta}</a></footer>
+@{endif}

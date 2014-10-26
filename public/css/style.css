@@ -290,6 +290,28 @@
 			margin-bottom: 0;
 		}
 
+
+	/* Blockquote */
+		blockquote:before, q:before, 
+		{
+			content:  "\f10d"!important;
+			font-size: 2em;
+			font-family: FontAwesome;
+			position: relative;
+			bottom: 0.25em;
+			padding-right: 0.125em;
+		}
+
+		blockquote:after, q:after, 
+		{
+			content:  "\f10e"!important;
+			font-size: 2em;
+			font-family: FontAwesome;
+			position: relative;
+			bottom: -0.6em;
+			padding-left: 0.125em;
+		}
+
 	/* Image */
 
 		.image
@@ -537,6 +559,41 @@
 			box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,0.15), 0px 2px 3px 0px rgba(0,0,0,0.1);
 			text-align: center;
 		}
+
+	/* Item */
+
+		.item
+		{
+		}
+		
+			.item.thumb
+			{
+				display: block;
+				position: relative;
+				background: #1a1f2c;
+				background: rgba(255,255,255,0.25);
+				cursor: default;
+			}
+			
+				.item.thumb h2
+				{
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					background: #1a1f2c;
+					background: rgba(18,21,29,0.85);
+					width: 100%;
+					padding: 1em;
+					font-weight: 400;
+					line-height: 1em;
+					z-index: 2;
+				}
+				
+				.item.thumb img
+				{
+					display: block;
+					z-index: 1;
+				}
 
 /*********************************************************************************/
 /* Icons                                                                         */

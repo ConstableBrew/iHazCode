@@ -1,14 +1,32 @@
 <div class="wrapper style1 first">
-	@{view('_masthead', model.masthead)}
+	<article class="container" id="top">
+	   @{view('_masthead', model.masthead)}
+	</article>
 </div>
 <div class="wrapper style2">
-	@{view('_work', model.work)}
+	<article id="work">
+	   @{view('_baseSection', model.work)}
+	</article>
 </div>
 <!--
 <div class="wrapper style3">
-	@view('_portfolio', model.portfolio)}
+	<div id="portfolio">
+	   @{view('_item', model.portfolio)}
+	</div>
 </div>
 -->
 <div class="wrapper style1">
-	@{view('_about', model.about)}
+	<article id="aboutme">
+		@{view('_baseSection', model.aboutme)}
+	</article>
+</div>
+
+<div class="wrapper style4">
+	<article class="container small" id="contact">
+        @{model.contact.width = '6u'}
+		@{view('_baseSection', model.contact)}
+	</article>
+	<article id="social">
+		@{model.social.width = '6u'}
+        @{view('_baseSection', model.social)}
 </div>

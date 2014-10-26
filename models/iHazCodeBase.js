@@ -6,4 +6,6 @@ module.exports = {
 	extend: function(child) { return Object.extends(child, iHazCodeBase)}
 };
 
-function iHazCodeBase() { }
+function iHazCodeBase() {
+    this.dataPromise = Promise.resolve();
+}
