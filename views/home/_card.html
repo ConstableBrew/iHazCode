@@ -1,0 +1,19 @@
+@{model.collection = model.collection.reduce(function(p,e,i) {
+    if (i % 3 === 0) { /* 3 items per row */
+        p.push([]);
+    }
+    p[p.length - 1].push(e);
+    return p;
+}, [])}
+@{foreach row in model.collection}
+    <div class="row">
+        @{foreach box in row}
+            <div class="4u">
+                <article class="box style2" style="background-image: url('@{box.thumbnail || ''}');">
+                    <h3><a href="#">@{box.title || ''}</a></h3>
+                    @{if typeof box.subTitle !== 'undefined'}<p>@{box.subTitle}</p>@{endif}
+                </article>
+            </div>
+        @{end}
+    </div>
+@{end}

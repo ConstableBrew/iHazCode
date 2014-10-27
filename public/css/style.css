@@ -82,7 +82,7 @@
 
 	blockquote
 	{
-		border-left: solid 0.75em #eee;
+		/*border-left: solid 0.75em #eee;*/
 		padding: 1em 0 1em 1.5em;
 		font-style: italic;
 	}
@@ -292,7 +292,8 @@
 
 
 	/* Blockquote */
-		blockquote:before, q:before, 
+		blockquote:before,
+		 q:before 
 		{
 			content:  "\f10d"!important;
 			font-size: 2em;
@@ -302,7 +303,8 @@
 			padding-right: 0.125em;
 		}
 
-		blockquote:after, q:after, 
+		blockquote:after,
+		q:after
 		{
 			content:  "\f10e"!important;
 			font-size: 2em;
@@ -558,41 +560,31 @@
 			background: #fff;
 			box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,0.15), 0px 2px 3px 0px rgba(0,0,0,0.1);
 			text-align: center;
+			background-position: 0px 0px;
+			background-repeat: no-repeat;
+			background-size: cover;
+			min-height: 260px;
+			z-index: 1;
+			position: relative;
 		}
-
-	/* Item */
-
-		.item
-		{
-		}
-		
-			.item.thumb
+			.box.style2
 			{
-				display: block;
-				position: relative;
-				background: #1a1f2c;
-				background: rgba(255,255,255,0.25);
-				cursor: default;
+				padding: 0 0;
+
 			}
-			
-				.item.thumb h2
+
+				.box.style2 h3
 				{
+					color: #fff;
+					text-shadow: none;
+					background-color: rgba(0,0,0,0.8);
 					position: absolute;
 					bottom: 0;
-					left: 0;
-					background: #1a1f2c;
-					background: rgba(18,21,29,0.85);
 					width: 100%;
-					padding: 1em;
-					font-weight: 400;
-					line-height: 1em;
 					z-index: 2;
-				}
-				
-				.item.thumb img
-				{
-					display: block;
-					z-index: 1;
+					margin: 0;
+					padding-top: 0.2em;
+					min-height: 33%;
 				}
 
 /*********************************************************************************/

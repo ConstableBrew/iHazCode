@@ -8,25 +8,26 @@
 	   @{view('_baseSection', model.work)}
 	</article>
 </div>
-<!--
 <div class="wrapper style3">
-	<div id="portfolio">
-	   @{view('_item', model.portfolio)}
-	</div>
+	<article id="portfolio">
+	   @{view('_baseSection', model.portfolio)}
+	</article>
 </div>
--->
-<div class="wrapper style1">
+<div class="wrapper style2">
 	<article id="aboutme">
 		@{view('_baseSection', model.aboutme)}
 	</article>
 </div>
 
 <div class="wrapper style4">
-	<article class="container small" id="contact">
-        @{model.contact.width = '6u'}
-		@{view('_baseSection', model.contact)}
-	</article>
-	<article id="social">
-		@{model.social.width = '6u'}
-        @{view('_baseSection', model.social)}
+	<div class="row">
+		<article class="container small featured" id="contact">
+			@{model.contact.width = '8u'}
+			@{view('_miniSection', model.contact)}
+		</article>
+		<article class="container small featured" id="social">
+			@{model.social.width = '4u'}
+			@{view('_miniSection', model.social)}
+		</article>
+	</div>
 </div>
