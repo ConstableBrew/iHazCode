@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"height",
+				"min-height"
+			],
+			[
+				"marg",
+				"margin-bottom"
+			],
+			[
+				"connec",
+				"connectionString"
+			],
+			[
+				"collec",
+				"collection"
+			],
+			[
+				"collection",
+				"collectionStyle"
+			],
+			[
 				"about",
 				"aboutme"
 			],
@@ -31,22 +51,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "models/HomePage.js",
-			"settings":
-			{
-				"buffer_size": 1086,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "views/home/_projectCard.html",
-			"settings":
-			{
-				"buffer_size": 216,
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "Packages/User/NodeJs.sublime-build",
 	"command_palette":
@@ -79,29 +83,60 @@
 		"/C/GitHub/iHazCode/controllers",
 		"/C/GitHub/iHazCode/definitions",
 		"/C/GitHub/iHazCode/models",
+		"/C/GitHub/iHazCode/public",
+		"/C/GitHub/iHazCode/public/css",
+		"/C/GitHub/iHazCode/public/js",
 		"/C/GitHub/iHazCode/views",
 		"/C/GitHub/iHazCode/views/home"
 	],
 	"file_history":
 	[
-		"/C/GitHub/iHazCode/controllers/home.js",
-		"/C/GitHub/iHazCode/views/_contact.html",
+		"/C/Users/constablebrew/Desktop/toptal.js",
+		"/C/Users/constablebrew/Desktop/toptal2.js",
+		"/C/Users/constablebrew/Downloads/wl.txt",
+		"/C/Users/constablebrew/Desktop/wl.txt",
 		"/C/GitHub/iHazCode/views/home/home.html",
+		"/C/GitHub/iHazCode/views/home/_card.html",
+		"/C/GitHub/iHazCode/public/css/style.css",
+		"/C/GitHub/iHazCode/public/css/style-mobile.css",
+		"/C/GitHub/iHazCode/public/css/style-desktop.css",
+		"/C/GitHub/iHazCode/public/css/style-1000px.css",
+		"/C/GitHub/iHazCode/public/js/init.js",
+		"/C/Users/constablebrew/AppData/Local/Temp/Temp1_html5up-miniport.zip/index.html",
+		"/C/GitHub/iHazCode/views/home/_baseSection.html",
+		"/C/GitHub/iHazCode/views/home/_miniSection.html",
+		"/C/Users/constablebrew/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/GitHub/iHazCode/views/home/_box.html",
+		"/C/Users/constablebrew/AppData/Local/Temp/Temp1_html5up-parallelism.zip/index.html",
+		"/C/GitHub/iHazCode/views/_layout.html",
+		"/C/Users/constablebrew/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/constablebrew/AppData/Local/Temp/Temp1_html5up-parallelism.zip/css/style-desktop.css",
+		"/C/Users/constablebrew/AppData/Local/Temp/Temp1_html5up-parallelism.zip/css/style-mobile.css",
+		"/C/Users/constablebrew/AppData/Local/Temp/Temp1_html5up-parallelism.zip/css/style.css",
+		"/C/Users/constablebrew/AppData/Local/Temp/Temp1_html5up-parallelism.zip/js/init.js",
+		"/C/GitHub/iHazCode/views/home/_social.html",
+		"/C/GitHub/iHazCode/views/home/_masthead.html",
+		"/C/GitHub/iHazCode/views/home/_portfolio.html",
+		"/C/GitHub/iHazCode/models/HomePage.js",
+		"/C/GitHub/iHazCode/controllers/home.js",
+		"/C/GitHub/iHazCode/views/_header.html",
+		"/C/GitHub/iHazCode/views/home/_contact.html",
+		"/C/GitHub/iHazCode/views/_footer.html",
+		"/C/GitHub/iHazCode/views/_baseSection.html",
 		"/C/GitHub/iHazCode/models/iHazCodeBase.js",
 		"/C/GitHub/iHazCode/definitions/getContacts.js",
-		"/C/GitHub/iHazCode/views/_footer.html",
-		"/C/GitHub/iHazCode/models/HomePage.js",
-		"/C/GitHub/iHazCode/views/_layout.html",
-		"/C/GitHub/iHazCode/views/home/_contact.html",
+		"/C/GitHub/iHazCode/database.json",
+		"/C/GitHub/iHazCode/definitions/database.js",
+		"/C/GitHub/iHazCode/RunNodemonWithEnvVarsSetup.bat",
+		"/C/GitHub/iHazCode/views/_box.html",
+		"/C/GitHub/iHazCode/views/_card.html",
+		"/C/GitHub/iHazCode/views/_social.html",
+		"/C/GitHub/iHazCode/.gitignore",
+		"/C/GitHub/iHazCode/views/_contact.html",
 		"/C/GitHub/iHazCode/views/home/_contactLink.html",
-		"/C/GitHub/iHazCode/views/home/_portfolio.html",
-		"/C/Users/constablebrew/AppData/Local/Temp/Temp1_html5up-miniport.zip/index.html",
-		"/C/GitHub/iHazCode/public/css/style.css",
 		"/C/GitHub/iHazCode/views/home/_workBox.html",
 		"/C/GitHub/iHazCode/views/home/_work.html",
 		"/C/GitHub/iHazCode/views/home/_about.html",
-		"/C/GitHub/iHazCode/views/home/_masthead.html",
-		"/C/GitHub/iHazCode/views/_header.html",
 		"/C/GitHub/iHazCode/views/_masthead.html",
 		"/C/GitHub/gitfiti.sh",
 		"/C/GitHub/iHazCode/package.json",
@@ -111,11 +146,8 @@
 		"/C/GitHub/gitfiti/gitfiti/gitfiti",
 		"/C/GitHub/gitfiti/README.md",
 		"/C/GitHub/gitfiti/gitfiti.py",
-		"/C/GitHub/iHazCode/public/css/style-mobile.css",
 		"/C/Users/constablebrew/AppData/Local/Temp/Temp1_px-expanse.zip/green/css/style-mobile.css",
-		"/C/GitHub/iHazCode/public/css/style-1000px.css",
 		"/C/Users/constablebrew/AppData/Local/Temp/Temp1_px-expanse.zip/green/css/style-1000px.css",
-		"/C/GitHub/iHazCode/public/css/style-desktop.css",
 		"/C/Users/constablebrew/AppData/Local/Temp/Temp1_px-expanse.zip/green/css/style-desktop.css",
 		"/C/Users/constablebrew/AppData/Local/Temp/Temp1_px-expanse.zip/green/css/style.css",
 		"/C/GitHub/iHazCode/public/Copyright.html",
@@ -123,11 +155,8 @@
 		"/C/Users/constablebrew/AppData/Local/Temp/Temp1_px-expanse.zip/green/index.html",
 		"/C/GitHub/iHazCode/views/home/_projects.html",
 		"/C/GitHub/iHazCode/views/home/_projectCard.html",
-		"/C/GitHub/iHazCode/RunNodemonWithEnvVarsSetup.bat",
 		"/C/Users/constablebrew/AppData/Roaming/Sublime Text 3/Packages/User/NodeJs.sublime-build",
 		"/C/GitHub/iHazCode/public/index.html",
-		"/C/GitHub/iHazCode/definitions/database.js",
-		"/C/GitHub/iHazCode/.gitignore",
 		"/C/GitHub/iHazCode/definitions/extends.js",
 		"/C/GitHub/iHazCode/models/ProjectDetail.js",
 		"/C/GitHub/iHazCode/views/home/homepage.html",
@@ -164,6 +193,37 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"quote",
+			"shadow",
+			"z-ind",
+			"\\.box",
+			"background-",
+			"    ",
+			"itemHeight",
+			"    ",
+			"hidden",
+			"\\$SZ",
+			"card",
+			"Main",
+			"main",
+			"    ",
+			"\\.box",
+			"article",
+			"box",
+			"this",
+			"    ",
+			"model",
+			"thumbnail: '",
+			"\"content\"content\"",
+			"\"title\"content\"",
+			"'\\n",
+			"',\\n",
+			"\" : {0,2}'",
+			"excerpt:",
+			"title:",
+			"    ",
+			"ctaurl",
+			"    ",
 			"\n						@{model.contacts + 'xxxxx'}",
 			"<ul",
 			"div",
@@ -179,9 +239,21 @@
 		"highlight": true,
 		"in_selection": false,
 		"preserve_case": false,
-		"regex": false,
+		"regex": true,
 		"replace_history":
 		[
+			"\\t",
+			"\"thumbnail\" : \"",
+			"\"content\"",
+			"\"title\"",
+			"\"\\n",
+			"\",\\n",
+			"\"content\" : \"",
+			"\"content\" :",
+			"\"title\" :",
+			"\\t",
+			"ctaUrl",
+			"\\t"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -192,66 +264,8 @@
 	"groups":
 	[
 		{
-			"selected": 1,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "models/HomePage.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1086,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								623,
-								623
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "views/home/_projectCard.html",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 216,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -297,7 +311,7 @@
 	"project": "iHazCode.sublime-project",
 	"replace":
 	{
-		"height": 58.0
+		"height": 94.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -331,7 +345,7 @@
 	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": true,
+	"side_bar_visible": false,
 	"side_bar_width": 322.0,
 	"status_bar_visible": true,
 	"template_settings":

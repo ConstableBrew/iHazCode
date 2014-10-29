@@ -10,7 +10,7 @@
         @{foreach box in row}
             <div class="4u">
                 <article class="box style2" style="background-image: url('@{box.thumbnail || ''}');">
-                    <h3><a href="#">@{box.title || ''}</a></h3>
+                    <a href="@{box.url}" data-poptrox="ajax,720x458"><h3>@{box.title || ''}</h3></a>
                     @{if typeof box.subTitle !== 'undefined'}<p>@{box.subTitle}</p>@{endif}
                 </article>
             </div>

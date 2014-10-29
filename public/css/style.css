@@ -587,6 +587,7 @@
 					min-height: 33%;
 				}
 
+
 /*********************************************************************************/
 /* Icons                                                                         */
 /*********************************************************************************/
@@ -623,6 +624,57 @@
 			{
 				font-size: 6em;
 			}
+
+/*********************************************************************************/
+/* Popover                                                                       */
+/*********************************************************************************/
+
+	.popover
+	{
+		background-image: url('images/bg.png');
+		max-width: 720px;
+	}
+		.popover header
+		{
+			margin-bottom: 1em;
+		}
+
+			.popover header .subtitle
+			{
+				font-style: italic;
+			}
+
+		.popover section p,
+		.popover section li
+		{
+			font-size: 100%;
+			margin: 0;
+			outline: 0;
+			padding: 0;
+			vertical-align: baseline;
+			text-align: left;
+			line-height: 150%;
+		}
+
+		.popover section li 
+		{
+			margin-bottom: 1.25em;
+		}
+
+		.popover .sidebar li
+		{
+			margin-bottom: 0.5em;
+			font-size: 80%;
+			line-height: 120%;
+		}
+
+		.popover img.thumbnail
+		{
+			width: 100%;
+			
+		}
+
+
 
 /*********************************************************************************/
 /* Wrappers                                                                      */

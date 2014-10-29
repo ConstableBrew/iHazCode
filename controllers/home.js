@@ -4,7 +4,6 @@ exports.install = function(framework) {
 };
 
 function view_homePage() {
-	debugger;
 	var self = this;
 	var model = framework.model('HomePage').create();
 	var db = framework.db;
@@ -13,6 +12,5 @@ function view_homePage() {
 		self.title('Software Developer | Michael K. Brewer');
 		self.layout('_layout');
 		self.view('home', model);
-		console.log('Home page view: ' + JSON.stringify(model).length);
 	});
 }

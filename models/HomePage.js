@@ -17,7 +17,7 @@ function HomePage() {
 		.toArray()
 		.then(function(data){
 			data.forEach(function(e,i) {
-				this[e._id || i] = e;
+				self[e._id || i] = e;
 				console.log('fetched ' + (e._id || i));
 			}, self);
 		}, function(error){

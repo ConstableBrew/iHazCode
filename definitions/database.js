@@ -1,5 +1,5 @@
 var promisedMongo = require('promised-mongo');
-var collections = ['posts'];
+var collections = ['posts', 'projects'];
 var db = promisedMongo(process.env.MONGOLAB_URI, collections);
 framework.db = db;
 

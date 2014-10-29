@@ -1,0 +1,25 @@
+<div class="row popover">
+	<div class="4u sidebar">
+		<img class="thumbnail" src="@{model.thumbnail}">
+		@{if typeof model.techStack !== 'undefined' && model.techStack.length > 0}
+			<ul class="default">
+				@{foreach tech in model.techStack}
+					<li>@{tech}</li>
+				@{end}
+			</ul>
+		@{endif}
+	</div>
+	<div class="8u">
+		<header>
+			@{if typeof model.title !== 'undefined'}
+				<h2>@{!model.title}</h2>
+			@{endif}
+			@{if typeof model.subTitle !== 'undefined'}
+				<p class="subtitle">@{!model.subTitle}</p>
+			@{endif}
+		</header>
+		@{if typeof model.content !== 'undefined'}
+			<section><p>@{!model.content}</p></section>
+		@{endif}
+	</div>
+</div>
