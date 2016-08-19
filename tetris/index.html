@@ -4,15 +4,16 @@
     <meta charset="utf-8">
     <title>Tetris</title>
     <style>
-    * {padding: 0; margin: 0; border: 0; background-color: black;}
+    *, *:before, *:after { box-sizing: border-box; }
+    html, body, canvas {padding: 0; margin: 0; border: 0; background-color: black;}
     </style>
 <script>
 setTimeout(function(){
     "use strict";
 
     let body = document.getElementsByTagName('body')[0];
-    while (body.firstChild)
-        body.removeChild(body.firstChild);
+    // while (body.firstChild)
+    //     body.removeChild(body.firstChild);
     
     let cvs    = document.createElement('canvas');
     let width  = window.innerWidth;
@@ -432,6 +433,10 @@ setTimeout(function(){
 },0);
 
 </script>
+    <link rel="stylesheet" href="/nav/nav.css" async>
 </head>
-<body></body>
+<body>
+    <nav class="left"><label>Cat Herders</label><a class="catherding" href="/catherding/" title="Cat Herders"></a></nav>
+    <nav class="right"><label>Resume Joust</label><a class="joust" href="/joust/" title="Resume Joust"></a></nav>
+</body>
 </html>
