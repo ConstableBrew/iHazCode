@@ -111,11 +111,14 @@ nav:hover > label, nav:active > label, nav:focus > label {
 
 
 .joust {
-    background: black url(/nav/joust-thumbnail.png) center/88% no-repeat;
+    background: black url(http://ihazcode.herokuapp.com/nav/joust-thumbnail.png) center/88% no-repeat;
 }
 .tetris {
-    background: black url(/nav/tetris-thumbnail.png) center/100% no-repeat;
+    background: black url(http://ihazcode.herokuapp.com/nav/tetris-thumbnail.png) center/100% no-repeat;
 }
 .catherding {
-    background: black url(/nav/catherding-thumbnail.png) center/90% no-repeat;
+    background: black url(http://ihazcode.herokuapp.com/nav/catherding-thumbnail.png) center/90% no-repeat;
+}
+.texting {
+    background: black url(http://ihazcode.herokuapp.com/nav/texting-thumbnail.png) center/100% no-repeat;
 }
