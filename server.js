@@ -13,7 +13,7 @@ var server = http.createServer(function(req, res) {
 
 	switch (urlParts.path) {
 		case '/':
-			res.writeHead(301, {Location: '/joust/'})
+			res.writeHead(302, {Location: '/joust/'})
 			res.end();
 			break;
 		default:
